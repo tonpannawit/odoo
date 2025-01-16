@@ -1,0 +1,11 @@
+<odoo>
+    <template id="show_bulky" inherit_id="website_sale.product">
+        <xpath expr="///div[@id='add_to_cart_wrap']" position="after">
+            <div t-if="product.bulky_product == True" class="my-2" style="padding: 15px; background-color: #f8d7da; border: 1px solid #f5c2c7; border-radius: 5px; display: flex; align-items: center;">
+                <span style="font-size: 14px; font-weight: bold; color: #842029;">
+                    Only available for Pickup
+                </span>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+    <template id="bulky_product_delivery" inherit_id="website_sale.payment">
+    <xpath expr="//div[@id='delivery_carrier']" position="replace">
+            <div t-if="any(line.product_id.bulky_product for line in order.order_line) and any(delivery.for_bulky_products for delivery in deliveries)" id="delivery_carrier">
+                <t t-set="delivery_nb" t-value="len(deliveries)"/>
+                <h3 t-if="delivery_nb &gt; 1" class="mb24">Choose a delivery method</h3>
+                <div t-if="delivery_nb &gt; 1" class="card border-0" id="delivery_method">
+                    <ul class="list-group">
+                        <t t-set="first_delivery" t-value="deliveries.filtered(lambda d: d.for_bulky_products)[0]"/>
+                            <t t-foreach="deliveries.filtered(lambda d: d.for_bulky_products)" t-as="delivery">
+                            <li class="list-group-item o_delivery_carrier_select">
+                                <input t-att-value="delivery.id" t-att-id="'delivery_%i' % delivery.id" type="radio" name="delivery_type" t-att-checked="order.carrier_id and order.carrier_id.id == delivery.id or delivery == first_delivery and 'checked' or False" t-att-class="'d-none' if delivery_nb == 1 else ''"/>                                
+                                <label class="label-optional" t-field="delivery.name"/>
+                                <t t-set="badge_class" t-value="(delivery_nb != 1 and 'float-end ' or '') + 'badge text-bg-secondary'"/>
+                                <span t-attf-class="#{badge_class} o_wsale_delivery_badge_price">Select to compute delivery rate</span>
+                                <t t-if="delivery.website_description">
+                                    <div t-field="delivery.website_description" class="text-muted mt8"/>
+                                </t>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+            
+            <div t-else="" id="delivery_carrier">
+                <t t-set="delivery_nb" t-value="len(deliveries)"/>
+                <h3 t-if="delivery_nb &gt; 1" class="mb24">Choose a delivery method</h3>
+                <div t-if="delivery_nb &gt; 1" class="card border-0" id="delivery_method">
+                    <ul class="list-group">
+                    <t t-foreach="deliveries" t-as="delivery">
+                        <li class="list-group-item o_delivery_carrier_select">
+                            <t t-call="website_sale_delivery.payment_delivery_methods"/>
+                        </li>
+                    </t>
+                    </ul>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <record id="view_delivery_carrier_form" model="ir.ui.view">
+        <field name="name">
+            delivery.carrier.view.form.bulky
+        </field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='delivery_details']" position="after">
+            <group>
+                <field name="for_bulky_products" string="For Bulky Products"/>
+            </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
