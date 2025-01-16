@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Search Partners by Phone/Mobile Number',
+    'name': 'Partners Search by Phone/Mobile Number',
     'version': '1.0',
     'category': 'Sales',
-    'summary': 'Search Partners by phone or mobile number',
-    'description': """
+    'summary': 'Sales Order search by phone or mobile number',
+    'description': "When creating sales order, you can look up partners/customers by phone number or mobile number.""
     """,
     'license': 'LGPL-3',
     'author': 'Ton Pannawit',
