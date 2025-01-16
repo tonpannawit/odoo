@@ -16,5 +16,5 @@
     'auto_install': False,
     'application': False,
     'price': '49.00',
-    'currency': 'AUD'
+    'currency': 'USD'
 }
