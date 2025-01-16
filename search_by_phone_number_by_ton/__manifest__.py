@@ -2,7 +2,7 @@
 
 {
     'name': 'Search Partners by Phone/Mobile Number',
-    'version': '1.1',
+    'version': '1.0',
     'category': 'Sales',
     'summary': 'Search Partners by phone or mobile number',
     'description': """
@@ -15,4 +15,6 @@
     'installable': True,
     'auto_install': False,
     'application': False,
+    'price': '49.00',
+    'currency': 'AUD'
 }
