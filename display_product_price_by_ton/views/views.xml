@@ -1,0 +1,40 @@
+<odoo>
+    <record id="show_qty_price" model="ir.ui.view">
+        <field name="name">product.template.form.pricelist.prices</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Quantity Pricing" name="quantity_pricing">
+                    <group>
+                    <field name="pricelist_items"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <template id="show_qty_price_web" inherit_id="website_sale.product">
+       <xpath expr="//div[@id='product_details']" position="after">
+            <div t-if="product.pricelist_items" class="table-responsive" style="margin-top: 20px">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Buy More &amp; Save More</th>
+                            <th class="text-center">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="product.pricelist_items.sorted(key=lambda item: item.min_quantity)" t-as="pricelist">
+                            <td class="text-center">
+                                <t t-esc="'{:.0f}'.format(pricelist.min_quantity)"/> units
+                            </td>
+                            <td class="text-center">
+                                $ <t t-esc="'{:.2f}'.format(pricelist.fixed_price)"/> per unit
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>

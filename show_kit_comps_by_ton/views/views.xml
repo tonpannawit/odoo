@@ -1,7 +1,7 @@
 <odoo>
     <template id="show_bom" inherit_id="website_sale.product">
-        <xpath expr="//div[@id='product_details']" position="inside">
-            <div class="my-2">
+        <xpath expr="//div[@id='product_details']" position="after">
+            <div t-if="product.kit_bom_type" class="my-2">
                 <h6>Kit Components:</h6>
                 <div t-raw="product.kit_components"/>
             </div>

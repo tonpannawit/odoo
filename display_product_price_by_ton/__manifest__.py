@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Show BOM Components on Website',
-    'version': '1.1',
+    'name': 'Website display product pricelists',
+    'version': '1.0',
     'category': 'Website',
     'summary': '',
-    'description': "Show components in BOM on the website. This works really well when the product is a kit.",
+    'description': "Display product prices for different pricelists",
     'license': '',
     'author': 'Ton Pannawit',
     'website': '',
-    'depends': ['base', 'product', 'sale_management',
+    'depends': ['base', 'product', 'sale',
                 'stock'],
     'data': ['views/views.xml'],
+    # 'data': [],
     'installable': True,
     'auto_install': False,
     'application': False,
