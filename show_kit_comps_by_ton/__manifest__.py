@@ -9,7 +9,7 @@
     'license': '',
     'author': 'Ton Pannawit',
     'website': '',
-    'depends': ['base', 'product', 'sale_management',
+    'depends': ['sale_management', 'mrp', 'website_sale',
                 'stock'],
     'data': ['views/views.xml'],
     'installable': True,

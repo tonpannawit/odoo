@@ -26,7 +26,7 @@ class ProductTemplate(models.Model):
             components_html = """
                 <table style="width: 100%; border-collapse: separate; border-spacing: 0;">
                     <thead>
-                        <tr style="background-color: #EA6100; color: white;">
+                        <tr style="background-color:rgb(102, 102, 102); color: white;">
                         <th style="padding: 12px; text-align: center;">Image</th>
                         <th style="padding: 12px; text-align: center;">Product</th>
                         <th style="padding: 12px; text-align: center;">Quantity</th>
