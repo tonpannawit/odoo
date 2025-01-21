@@ -11,6 +11,7 @@
     'website': 'https://www.linkedin.com/in/ton-pannawit-veerareungrat-603980120/',
     'depends': ['sale_management', 'mrp', 'website_sale','stock'],
     'data': ['views/views.xml'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'auto_install': False,
     'application': False,
