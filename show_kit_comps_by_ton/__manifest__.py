@@ -6,7 +6,7 @@
     'category': 'Website',
     'summary': 'Display components in BOM on the website',
     'description': "Show components in BOM on the website.",
-    'license': '',
+    'license': 'LGPL-3',
     'author': 'Ton Pannawit',
     'website': 'https://www.linkedin.com/in/ton-pannawit-veerareungrat-603980120/',
     'depends': ['sale_management', 'mrp', 'website_sale','stock'],
