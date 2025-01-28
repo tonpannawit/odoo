@@ -15,7 +15,5 @@
     # 'data': [],
     'installable': True,
     'auto_install': False,
-    'application': False,
-    'price': '70.00',
-    'currency': 'USD'
+    'application': False
 }
