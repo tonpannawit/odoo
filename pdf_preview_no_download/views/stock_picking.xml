@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="tonpan_view_picking_form" model="ir.ui.view">
+		<field name="name">tonpan.stock.picking.form</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='action_cancel']" position="before">
+				<button name="view_report_preview" type="object" class="oe_highlight" string="Print Picking Slip" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

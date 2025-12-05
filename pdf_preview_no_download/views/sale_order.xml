@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="tonpan_view_order_form" model="ir.ui.view">
+            <field name="name">tonpan.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_quotation_send']" position="after">
+                <button name="view_report_preview" type="object" class="oe_highlight" string="Print Order/Quote" />
+                <button name="view_report_proforma" type="object" class="oe_highlight" string="Print Pro-Forma" />
+            </xpath>
+        </field>
+        </record>
+
+</odoo>
