@@ -10,7 +10,7 @@
     """,
     'category': 'Extra Tools',
     'depends': [
-        'base', 'base_setup', 'product', 'sale_management',
+        'base', 'base_setup', 'sale_management',
                 'stock', 'purchase', 'account'
     ],
     'data': [
