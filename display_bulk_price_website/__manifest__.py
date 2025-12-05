@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Website display product pricelists',
+    'name': 'Website display bulk product pricelists',
     'version': '16.0.0',
     'category': 'Website',
     'summary': '',
@@ -12,7 +12,8 @@
     'depends': ['base', 'product', 'sale',
                 'stock'],
     'data': ['views/views.xml'],
-    # 'data': [],
+
+    'images': ['static/description/icon.png'],
     'installable': True,
     'auto_install': False,
     'application': False,

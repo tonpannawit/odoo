@@ -14,6 +14,8 @@
              'views/product_template.xml',
              'views/website_sale.xml'
              ],
+    
+    'images': ['static/description/icon.png'],
     'installable': True,
     'auto_install': False,
     'application': False,
