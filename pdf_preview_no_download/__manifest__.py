@@ -19,7 +19,7 @@
         'views/purchase_order.xml',
         'views/account_move.xml'
     ],
-    'images': ['static/description/icon.png'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
