@@ -6,8 +6,8 @@
 		<field name="inherit_id" ref="account.view_move_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//button[@name='button_cancel']" position="before">
-				<button name="view_report_preview" type="object" class="oe_highlight" string="Print Unpaid Invoice" />
-				<button name="view_report_preview_with_payments" type="object" class="oe_highlight" string="Print Paid Invoice" />
+				<button name="view_report_preview" type="object" class="oe_highlight" string="View Unpaid Invoice" />
+				<button name="view_report_preview_with_payments" type="object" class="oe_highlight" string="View Paid Invoice" />
 			</xpath>
 			
 		</field>

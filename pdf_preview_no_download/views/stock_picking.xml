@@ -6,7 +6,7 @@
 		<field name="inherit_id" ref="stock.view_picking_form"/>
 		<field name="arch" type="xml">
 			<xpath expr="//button[@name='action_cancel']" position="before">
-				<button name="view_report_preview" type="object" class="oe_highlight" string="Print Picking Slip" />
+				<button name="view_report_preview" type="object" class="oe_highlight" string="View Picking Slip" />
 			</xpath>
 		</field>
 	</record>

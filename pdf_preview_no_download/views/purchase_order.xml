@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="purchase.purchase_order_form" />
         <field name="arch" type="xml">
             <xpath expr="//button[@name='button_cancel']" position="after">
-                <button name="view_report_preview" type="object" class="oe_highlight" string="Print RFQ/PO" />
+                <button name="view_report_preview" type="object" class="oe_highlight" string="View RFQ/PO" />
             </xpath>
         </field>
     </record>
