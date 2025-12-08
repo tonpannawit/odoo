@@ -6,8 +6,8 @@
             <field name="inherit_id" ref="sale.view_order_form" />
             <field name="arch" type="xml">
             <xpath expr="//button[@name='action_quotation_send']" position="after">
-                <button name="view_report_preview" type="object" class="oe_highlight" string="Print Order/Quote" />
-                <button name="view_report_proforma" type="object" class="oe_highlight" string="Print Pro-Forma" />
+                <button name="view_report_preview" type="object" class="oe_highlight" string="View Order/Quote" />
+                <button name="view_report_proforma" type="object" class="oe_highlight" string="View Pro-Forma" />
             </xpath>
         </field>
         </record>
