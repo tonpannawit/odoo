@@ -24,6 +24,6 @@
     'application': False,
     'auto_install': False,
     'license': 'OPL-1',
-    'price': '20.00',
+    'price': '18.00',
     'currency': 'USD'
 }
