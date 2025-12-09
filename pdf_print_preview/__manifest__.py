@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'PDF Preview without Download',
+    'name': 'PDF Print Preview',
     'version': '18.0.0',
     'website': 'https://www.linkedin.com/in/ton-pannawit-veerareungrat-603980120/',
     'author': 'Veera eCom Solutions',
@@ -24,6 +24,6 @@
     'application': False,
     'auto_install': False,
     'license': 'OPL-1',
-    'price': '20.00',
+    'price': '18.00',
     'currency': 'USD'
 }
