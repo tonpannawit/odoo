@@ -8,7 +8,7 @@
     'description': """This module allows a users to open a pdf file on a new tab without downloading. Print buttons appear for Sales Order/Quotation,
     Pro-Forma Invoice, Stock Move Operations, RFQ/PO, and Paid/Unpaid Invoice.
     """,
-    'category': 'Extra Tools',
+    'category': 'web',
     'depends': [
         'base', 'base_setup', 'sale_management',
                 'stock', 'purchase', 'account'
