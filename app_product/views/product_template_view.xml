@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem 
+        id="veera_app_menu" 
+        name="Products" 
+        sequence="11" 
+        web_icon="app_product,static/description/icon.png" 
+    />
+
+    <menuitem 
+        id="veera_product_templ_menu"
+        name="Product" 
+        parent="veera_app_menu"
+        action="sale.product_template_action"
+        sequence="1"
+    />
+
+    <menuitem 
+        id="veera_product_product_menu"
+        name="Product Variant" 
+        parent="veera_app_menu"
+        action="product.product_normal_action_sell"
+        sequence="2"
+    />
+
+    <menuitem 
+        id="veera_pricelist"
+        name="Pricelists"
+        parent="veera_app_menu"
+        action="product.product_pricelist_action2"
+        sequence="3"
+    />
+</odoo>
