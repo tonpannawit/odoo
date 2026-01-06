@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="veera_purchase_order_form" model="ir.ui.view">
+        <field name="name">veera.purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_cancel']" position="after">
+                <button name="create_bill" type="object" class="oe_highlight" string="Create Bill" invisible="state != 'purchase'" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
